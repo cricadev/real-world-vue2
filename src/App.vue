@@ -1,10 +1,14 @@
 <template>
   <div id="app">
     <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link :to="{ name: 'event-list' }">Home</router-link> |
+      <router-link :to="{ name: 'event-show' }">Show Event #1</router-link> |
+      <router-link :to="{ name: 'event-create' }">Create Event</router-link> |
+      <router-link :to="{ name: 'user-vue', params: { username: 'Amazon' } }"
+        >Name</router-link
+      >
+      <router-view></router-view>
     </nav>
-    <router-view />
   </div>
 </template>
 
